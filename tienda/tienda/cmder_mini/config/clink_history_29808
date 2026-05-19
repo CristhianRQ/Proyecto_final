@@ -1,0 +1,5 @@
+cd ..
+cd backend\
+|ode server.js
+|ode server.js
+node server.js

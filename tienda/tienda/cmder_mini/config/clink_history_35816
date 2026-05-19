@@ -1,0 +1,27 @@
+|d ..
+|d backend\
+npm init -y npm install express mysql2 cors dotenv
+npm init -y
+npm install express mysql2 cors dotenv
+|d ..
+|d frontend\
+|pm create vite@latest frontend -- --template react
+|d ..
+|pm create vite@latest frontend -- --template react
+npm create vite@latest frontend -- --template react
+|d frontend\
+npm install
+npm install axios chart.js react-chartjs-2 @tensorflow/tfjs
+|pm run dev
+npm install @tensorflow/tfjs react-chartjs-2 chart.js axios
+|d .. 
+|d backend\
+npm install bcrypt cors
+|ode server.js
+cd ..
+|ode server.js
+cd backend\
+node server.js
+cd .. 
+cd frontend\
+npm run dev
