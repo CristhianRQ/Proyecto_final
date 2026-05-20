@@ -1,0 +1,69 @@
+.shell {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: #f8f9fa;
+  font-family: 'Outfit', system-ui, sans-serif;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 1.75rem 2rem;
+  background: #f8f9fa;
+}
+
+.pageCard {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 28, 48, 0.06);
+  overflow: hidden;
+}
+
+.pageCardHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #f1f5f9;
+  background: #fff;
+}
+
+.pageCardTitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #64748b;
+  margin: 0;
+}
+
+.badgeActive {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 0.35rem 0.75rem;
+  border-radius: 100px;
+}
+
+.pageCardBody {
+  padding: 1.5rem;
+}
+
+@media (max-width: 991.98px) {
+  .shell {
+    flex-direction: column;
+  }
+
+  .main {
+    height: auto;
+    min-height: calc(100vh - 280px);
+    padding: 1rem;
+  }
+}

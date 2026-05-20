@@ -1,0 +1,5 @@
+cd..
+cd frontend\
+|ode server.js
+node server.js
+npm run dev

@@ -1,0 +1,73 @@
+.dashboard {
+  width: 100%;
+}
+
+.mainTitle {
+  color: #001c30;
+}
+
+.subtitle {
+  color: #768192;
+  font-size: 0.95rem;
+}
+
+.sectionTitle {
+  color: #001c30;
+}
+
+.kpiCard {
+  border-radius: 12px !important;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.kpiCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 28, 48, 0.1) !important;
+}
+
+.kpiLabel {
+  color: #768192;
+  letter-spacing: 0.04em;
+}
+
+.kpiValue {
+  color: #001c30;
+}
+
+.badgeMl {
+  background: linear-gradient(135deg, #ede9fe, #e0e7ff);
+  color: #452e5a;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.35rem 0.65rem;
+}
+
+.label {
+  color: #001c30;
+  font-size: 0.85rem;
+}
+
+.resultLabel {
+  color: #768192;
+  font-size: 0.9rem;
+}
+
+.predictionOutput {
+  color: #452e5a;
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.modeloId {
+  color: #768192;
+}
+
+.modeloVentas {
+  color: #001c30;
+}
+
+.barPurple {
+  background-color: #452e5a !important;
+}

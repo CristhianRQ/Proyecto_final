@@ -1,0 +1,426 @@
+/* Login SNEAKERS CRM — diseño split premium */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap');
+
+.page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 1rem 0;
+  font-family: 'Outfit', system-ui, sans-serif;
+  background: linear-gradient(145deg, #f8f4ec 0%, #ede8ff 45%, #e8f4fc 100%);
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* Centrado vertical del bloque — NO usar flex en .page sin width:100% en el hijo */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+
+/* Fondo decorativo */
+.bgOrb1,
+.bgOrb2 {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bgOrb1 {
+  width: 420px;
+  height: 420px;
+  top: -120px;
+  right: -80px;
+  background: rgba(99, 102, 241, 0.35);
+}
+
+.bgOrb2 {
+  width: 360px;
+  height: 360px;
+  bottom: -100px;
+  left: -60px;
+  background: rgba(69, 46, 90, 0.28);
+}
+
+.bgGrid {
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 28, 48, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 28, 48, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Bootstrap container: ancho completo y centrado en pantalla */
+.page .container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  flex: 0 0 auto;
+}
+
+/* Fila que envuelve la tarjeta */
+.page .loginRow {
+  width: 100%;
+  margin: 0;
+}
+
+.page .loginCol {
+  width: 100%;
+  padding: 0 0.75rem;
+}
+
+.loginWrap {
+  flex: 0 0 auto;
+}
+
+/* Tarjeta principal */
+.shell {
+  width: 100%;
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 24px !important;
+  overflow: hidden;
+  box-shadow:
+    0 4px 6px rgba(0, 28, 48, 0.04),
+    0 24px 48px rgba(69, 46, 90, 0.12),
+    0 0 0 1px rgba(255, 255, 255, 0.8) inset !important;
+  animation: cardIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Panel izquierdo — marca */
+.brandPanel {
+  background: linear-gradient(160deg, #001c30 0%, #2d1f47 40%, #452e5a 75%, #5b4d8a 100%);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  min-height: 320px;
+}
+
+.brandPanel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.4) 0%, transparent 50%),
+    radial-gradient(circle at 90% 10%, rgba(255, 255, 255, 0.08) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.brandInner {
+  position: relative;
+  z-index: 1;
+  padding: 2.5rem 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.logoMark {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #fff 0%, #e0e7ff 100%);
+  color: #452e5a;
+  font-weight: 800;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: -0.05em;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.25rem;
+}
+
+.brandTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  margin: 0;
+  line-height: 1;
+}
+
+.brandTagline {
+  margin: 0.5rem 0 1.5rem;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-weight: 500;
+}
+
+.shoeSvg {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin: 0.5rem 0 1.5rem;
+  opacity: 0.9;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 auto;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.featureList li {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.65rem;
+}
+
+.featureDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #a5f3fc;
+  flex-shrink: 0;
+  box-shadow: 0 0 8px #67e8f9;
+}
+
+.brandBadge {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 100px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  width: fit-content;
+}
+
+/* Panel formulario */
+.formPanel {
+  background: #fff;
+}
+
+.formInner {
+  padding: 2.5rem 2rem;
+}
+
+@media (min-width: 992px) {
+  .formInner {
+    padding: 3rem 2.75rem;
+  }
+}
+
+.formEyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #452e5a;
+  background: #f3eff8;
+  padding: 0.35rem 0.75rem;
+  border-radius: 100px;
+  margin-bottom: 0.75rem;
+}
+
+.formTitle {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #001c30;
+  margin: 0 0 0.35rem;
+  letter-spacing: -0.02em;
+}
+
+.formSubtitle {
+  color: #768192;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.label {
+  color: #001c30;
+  font-weight: 600;
+  font-size: 0.82rem;
+  margin-bottom: 0.35rem;
+}
+
+.inputGroup {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 28, 48, 0.06);
+  border: 1px solid #e8ecf1;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.inputGroup:focus-within {
+  border-color: #452e5a;
+  box-shadow: 0 0 0 3px rgba(69, 46, 90, 0.12);
+}
+
+.inputIcon {
+  background: #f8fafc !important;
+  border: none !important;
+  color: #452e5a !important;
+  padding: 0 0.9rem !important;
+}
+
+.input {
+  border: none !important;
+  padding: 0.75rem 1rem !important;
+  font-size: 0.95rem !important;
+  background: #fff !important;
+}
+
+.input:focus {
+  box-shadow: none !important;
+}
+
+.btnGhost {
+  border: none !important;
+  background: #f8fafc !important;
+  color: #768192 !important;
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  padding: 0 0.85rem !important;
+}
+
+.btnGhost:hover {
+  background: #f1f5f9 !important;
+  color: #452e5a !important;
+}
+
+.btnPrimary {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.25rem !important;
+  border: none !important;
+  border-radius: 12px !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  color: #fff !important;
+  background: linear-gradient(135deg, #452e5a 0%, #5b4d8a 50%, #6366f1 100%) !important;
+  box-shadow: 0 8px 24px rgba(69, 46, 90, 0.35);
+  transition: transform 0.2s, box-shadow 0.2s !important;
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(69, 46, 90, 0.45) !important;
+  color: #fff !important;
+}
+
+.btnPrimary:active {
+  transform: translateY(0);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  color: #cbd5e1;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #e8ecf1;
+}
+
+.footer {
+  color: #768192;
+  font-size: 0.9rem;
+}
+
+.linkToggle {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #452e5a;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.linkToggle:hover {
+  color: #6366f1;
+  text-decoration: underline;
+}
+
+.hint {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.hint code {
+  background: #f1f5f9;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  color: #452e5a;
+  font-size: 0.78rem;
+}
+
+.alertError {
+  background: #fef2f2 !important;
+  border: 1px solid #fecaca !important;
+  color: #b91c1c !important;
+  border-radius: 12px !important;
+}
+
+.alertSuccess {
+  background: #ecfdf5 !important;
+  border: 1px solid #a7f3d0 !important;
+  color: #047857 !important;
+  border-radius: 12px !important;
+}
+
+/* Móvil: panel marca compacto arriba */
+@media (max-width: 991.98px) {
+  .brandInner {
+    padding: 2rem 1.5rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .brandTitle {
+    font-size: 1.75rem;
+  }
+
+  .shoeSvg {
+    max-width: 140px;
+    margin: 0.5rem auto 1rem;
+  }
+
+  .featureList {
+    display: none;
+  }
+
+  .formInner {
+    padding: 2rem 1.5rem;
+  }
+}

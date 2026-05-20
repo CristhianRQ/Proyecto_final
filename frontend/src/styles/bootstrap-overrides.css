@@ -1,0 +1,13 @@
+/* Overrides Bootstrap — SNEAKERS ERP */
+
+.sneakers-login-card .form-control:focus,
+.sneakers-login-card .form-select:focus {
+  box-shadow: none;
+}
+
+/* Panel: selects y formularios */
+.form-select:focus,
+.form-control:focus {
+  border-color: #452e5a;
+  box-shadow: 0 0 0 0.2rem rgba(69, 46, 90, 0.12);
+}

@@ -1,0 +1,78 @@
+.container {
+  width: 100%;
+}
+
+.mainTitle {
+  color: #001C30;
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+
+.subtitle {
+  color: #768192;
+  margin: 5px 0 30px 0;
+  font-size: 1rem;
+}
+
+.tableWrapper {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 28, 48, 0.04);
+  overflow: hidden;
+  width: 100%;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.thead {
+  background-color: #001C30;
+  color: #FFFAF0;
+}
+
+.th {
+  padding: 20px;
+}
+
+.tr {
+  border-bottom: 1px solid #f1f2f6;
+  transition: background 0.2s;
+}
+
+.tr:hover {
+  background-color: #fffcf7;
+}
+
+.td {
+  padding: 20px;
+}
+
+.rank {
+  font-weight: bold;
+  color: #452E5A;
+  font-size: 1.1rem;
+}
+
+.clientName {
+  font-weight: 600;
+  color: #001C30;
+}
+
+.investment {
+  font-weight: bold;
+  color: #2ed573;
+}
+
+.badge {
+  background-color: #e3fcef;
+  color: #2ed573;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
